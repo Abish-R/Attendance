@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:gravity="center_horizontal"
+    tools:context="helix.attendancehelix.AttendanceRegister">
+
+    <!--TextView
+        android:layout_weight=".1"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Attendance Register" /-->
+    <!--LinearLayout
+        android:layout_weight=".1"
+        android:id="@+id/in_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/in_checkBox" /-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:hint="In/Out Time"
+            android:focusable="false"
+            android:enabled="false"
+            android:id="@+id/in_time" />
+    <!--/LinearLayout>
+    <LinearLayout
+        android:layout_weight=".1"
+        android:id="@+id/out_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/out_checkBox" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Out Time"
+            android:focusable="false"
+            android:enabled="false"
+            android:id="@+id/out_time" />
+    </LinearLayout-->
+    <LinearLayout
+        android:layout_weight=".1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/last_layout"
+        android:layout_alignParentBottom="true">
+    <TextView
+        android:layout_weight=".75"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center|left"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:paddingLeft="10dp"
+        android:text="No Location"
+        android:id="@+id/gps_position"
+        android:layout_below="@+id/last_layout"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:layout_weight=".25"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="GPS"
+        android:id="@+id/gps_loc"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_weight=".5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/cam_img"
+        android:id="@+id/cam_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+    <Button
+        android:layout_weight=".085"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Take Pic"
+        android:id="@+id/cam_image"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/press_effect_button"/>
+    <LinearLayout
+        android:layout_weight=".1"
+        android:id="@+id/last_layout"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/cam_image">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Save"
+            android:background="@drawable/press_effect_button"
+            android:id="@+id/save"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sync"
+            android:background="@drawable/press_effect_rect"
+            android:id="@+id/sync"/>
+    </LinearLayout>
+
+</LinearLayout>
